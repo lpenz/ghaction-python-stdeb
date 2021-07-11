@@ -1,0 +1,16 @@
+---
+name: python-stdeb
+description: Build a python 3 debian package using stdeb
+branding:
+  icon: package
+  color: gray-dark
+inputs:
+  working_directory:
+    description: Directory to run stdeb
+    default: .
+  debian_revision:
+    description: Debian revision to use
+    default: 0
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

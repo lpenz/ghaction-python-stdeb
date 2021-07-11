@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DEBIAN_REVISION=${INPUT_DEBIAN_REVISION:-0}
+WORKING_DIRECTORY=${INPUT_WORKING_DIRECTORY:-.}
+
+set -e -x
+
+cd "$WORKING_DIRECTORY"
+
+python3 setup.py --command-packages=stdeb.command \
+        sdist_dsc --debian-version "$DEBIAN_REVISION" \
+        bdist_deb
+cp -l ./deb_dist/*.deb .
