@@ -13,7 +13,7 @@ Create a debian package from a python package using [stdeb].
 Example usage, copied in part from
 [ftpsmartsync](https://github.com/lpenz/ftpsmartsync/blob/main/.github/workflows/ci.yml).
 
-```{yml}
+```yml
 jobs:
   packagecloud:
     runs-on: ubuntu-latest
