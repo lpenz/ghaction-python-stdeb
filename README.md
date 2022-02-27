@@ -27,7 +27,7 @@ jobs:
       - uses: docker://lpenz/ghaction-packagecloud:v0.3
         if: steps.version.outputs.version_commit != ''
         with:
-          repository: debian/debian/buster
+          repository: debian/debian/bullseye
         env:
           PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
 ```
