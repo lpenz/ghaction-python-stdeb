@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bullseye-20221114
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN set -e -x; \
